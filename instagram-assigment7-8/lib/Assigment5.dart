@@ -1,6 +1,6 @@
 //  instagram page formate
 import 'package:flutter/material.dart';
-import 'images.dart';
+import 'navigation.dart';
 
 class Assigment5 extends StatefulWidget {
   const Assigment5({super.key});
@@ -20,6 +20,8 @@ class _Assigment5state extends State<Assigment5> {
   int like7 = 0;
   int like8 = 0;
   int like9 = 0;
+
+  bool isFavorite = false;
 
   int count(int count) {
     return ++count;
@@ -66,12 +68,14 @@ class _Assigment5state extends State<Assigment5> {
                   IconButton(
                       onPressed: () {
                         like1 = count(like1);
-                        setState(() {});
+                        setState(() {
+                          isFavorite = !isFavorite;
+                        });
                       },
-                      icon: const Icon(
-                        Icons.favorite_outline,
+                      icon: Icon(
+                        isFavorite ? Icons.favorite : Icons.favorite_border,
+                        color: isFavorite ? Colors.red : null,
                         size: 30,
-                        color: Colors.red,
                       )),
                   IconButton(
                       onPressed: () {},
@@ -85,6 +89,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -137,6 +150,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -185,6 +207,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -233,6 +264,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -285,6 +325,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -338,6 +387,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -391,6 +449,15 @@ class _Assigment5state extends State<Assigment5> {
                         Icons.send,
                         size: 30,
                       )),
+                  const SizedBox(
+                    width: 200,
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.save_alt_rounded,
+                        size: 30,
+                      ))
                 ]),
                 Row(
                   children: [
@@ -414,6 +481,47 @@ class _Assigment5state extends State<Assigment5> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Row(
+        children: [
+          const SizedBox(
+            width: 30,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.home,
+                size: 30,
+              )),
+          const SizedBox(
+            width: 30,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                size: 30,
+              )),
+          const SizedBox(
+            width: 30,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.add_a_photo,
+              size: 30,
+            ),
+          ),
+          const SizedBox(
+            width: 30,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.supervised_user_circle_outlined,
+                size: 30,
+              ))
+        ],
       ),
     );
   }
