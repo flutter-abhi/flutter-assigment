@@ -1,4 +1,5 @@
 // ignore: unused_import
+import 'package:contaners_10_assigment/padding.dart';
 import 'package:contaners_10_assigment/prgram3.dart';
 import 'package:contaners_10_assigment/prgram4.dart';
 import 'package:contaners_10_assigment/program1.dart';
@@ -21,7 +22,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Program10(),
+      home: PaddingAssignment(),
     );
   }
 }
